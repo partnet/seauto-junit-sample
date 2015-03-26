@@ -2,7 +2,7 @@ SeAuto JUnit Sample Project
 ===========================
 
 # Introduction
-------------
+
 This project is intended to be a template project for those wanting to quickly
 implement and use SeAuto for JUnit.
 
@@ -44,7 +44,7 @@ Execute the following command to download the appropriate drivers for your curre
 mvn com.partnet:seauto-driver-manager:download
 ```
 
-After that, run the tests with the following command, as found in the [Configuration](//partnet.github.io/seauto/#/configuration) section of the documentation:
+After that, run the tests with the following command, as found in the [*Configuration*](//partnet.github.io/seauto/#/configuration) section of the documentation:
 
 ```
 mvn clean integration-test -Dtest.config.browser=<your browser, eg. IE>
