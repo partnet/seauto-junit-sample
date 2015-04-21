@@ -14,17 +14,19 @@ implement and use SeAuto for JUnit.
   * Any version on that page will work if you have a preference
 * Firefox, for the demo to run
 
-## To build the archetype:
-````bash
-mvn archetype:create-from-project
-cd target/genrated-sources/archetype
-mvn install
-cd /to/new/project/dir
-mvn archetype:generate -DarchetypeCatalog=local
-````
-Then, select the correct archetype from the list and follow the instructions inserting your GroupId, etc..
+## Get Started
+Run this single command to use a hosted template (a.k.a. archetype) of this project:
+```bash
+mvn archetype:generate -Dfilter=seauto
+```
+Select the framework you would like to use, and you are on your way! This will use one of the pre-built hosted templates to get you started with SeAuto that tailors the project to your organization's needs.
 
-## To run this project or the built archetype
+You may want to download the various Driver Binaries for your project. To do this, run this command inside of your newly created SeAuto project directory:
+```bash
+mvn com.partnet:seauto-driver-manager:download
+```
+
+## To run the SeAuto JUnit Project
 To run:
 
 `mvn clean integration-test` 
@@ -36,15 +38,8 @@ You should see a Firefox browser launch, go to Bing.com, and search for Partnet,
 After the tests have run, JUnit reports can be found in `target/surefire-reports` and screenshots can be found in the `target/screenshot` directory.
 
 ## Run with other browsers
-The other driver binaries can be downloaded and placed in the correct location by using the seauto-driver-manager plugin.
 
-Execute the following command to download the appropriate drivers for your current operating system:
-
-```
-mvn com.partnet:seauto-driver-manager:download
-```
-
-After that, run the tests with the following command, as found in the [*Configuration*](//partnet.github.io/seauto/#/configuration) section of the documentation:
+Run the tests with the following command, as found in the [*Configuration*](//partnet.github.io/seauto/#/configuration) section of the documentation:
 
 ```
 mvn clean integration-test -Dtest.config.browser=<your browser, eg. IE>
@@ -54,3 +49,13 @@ To run each test with its own browser type, see [*Create Tests.*](//partnet.gith
 
 # Documentation
 Please see the main SeAuto [documentation](//partnet.github.io/seauto/#/getStarted) for further information.
+
+## To build the archetype:
+````bash
+mvn archetype:create-from-project
+cd target/generated-sources/archetype
+mvn install
+cd /to/new/project/dir
+mvn archetype:generate -DarchetypeCatalog=local
+````
+Then, select the correct archetype from the list and follow the instructions inserting your GroupId, etc..
